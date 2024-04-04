@@ -1,0 +1,15 @@
+App\Entity\User:
+  test_user@test.com:
+    email: test_user@test.com
+    password: 'testooooeeedd43'
+    userGroup: standard
+    roles: ['ROLE_USER']
+    userPermissions: []
+
+  dev_user@test.com:
+    email: dev_user@test.com
+    password: 'testdevooooeeedd43'
+    userGroup: standard
+    roles: [ 'ROLE_USER' ]
+    userPermissions: [ ]
+

@@ -1,0 +1,20 @@
+resources:
+  App\Entity\User:
+    operations:
+      ApiPlatform\Metadata\GetCollection:
+        method: GET
+      ApiPlatform\Metadata\Get:
+        method: GET
+      ApiPlatform\Metadata\Post:
+        method: POST
+      ApiPlatform\Metadata\Put:
+        method: PUT
+      ApiPlatform\Metadata\Delete:
+        method: Delete
+    processor: 'App\State\UserPasswordHasherStateProcessor'
+    attributes:
+      paginationItemsPerPage: 5
+    normalizationContext:
+      groups: ['user:read']
+    denormalizationContext:
+      groups: ['user:write']
