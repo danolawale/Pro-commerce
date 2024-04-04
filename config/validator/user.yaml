@@ -1,0 +1,26 @@
+App\Entity\User:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+  properties:
+    email:
+      - NotBlank: ~
+      - Type: string
+      - Email:
+          message: The email "{{value}}" is not valid
+    roles:
+      - All:
+          - Choice: [ROLE_USER, ROLE_ADMIN]
+    plainPassword:
+      - Type:
+          type: string
+      - Length:
+          min: 8
+    userGroup:
+      - Type:
+          type: string
+    userPermissions:
+      - All:
+          - Type: [string]
+
+
+

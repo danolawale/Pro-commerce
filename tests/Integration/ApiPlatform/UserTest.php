@@ -51,7 +51,7 @@ class UserTest extends AbstractApiTestCase
             'json' => [
                 "email" => "new_user@test.com",
                 "roles" => ["ROLE_USER"],
-                "plainPassword" => "test232"
+                "plainPassword" => "test23255"
             ],
         ]);
         $this->assertResponseIsSuccessful();
@@ -73,7 +73,7 @@ class UserTest extends AbstractApiTestCase
             'json' => [
                 "@id" => "/api/users/2",
                 "email" => "new_user@test.com",
-                "plainPassword" => "test255",
+                "plainPassword" => "test25577",
                 "userGroup" => "standard"
             ],
         ]);
@@ -94,6 +94,9 @@ class UserTest extends AbstractApiTestCase
 
     public function test_delete_user_is_successfull(): void
     {
+        $response = $this->client()->request('DELETE','/api/users/2');
 
+        $this->assertResponseIsSuccessful();
+        $this->assertResponseStatusCodeSame(204);
     }
 }
