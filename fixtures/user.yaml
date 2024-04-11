@@ -1,15 +1,22 @@
 App\Entity\User:
   test_user@test.com:
     email: test_user@test.com
-    password: 'testooooeeedd43'
+    password: '\$2y\$13\$xyUnkdYpPIDCd5eOm0mqF.vktQD8c3v7s3iUpUw3CfKH2nn39XWrS'
     userGroup: standard
     roles: ['ROLE_USER']
     userPermissions: []
 
   dev_user@test.com:
     email: dev_user@test.com
-    password: 'testdevooooeeedd43'
+    password: '\$2y\$13\$xyUnkdYpPIDCd5eOm0mqF.vktQD8c3v7s3iUpUw3CfKH2nn39XWrS'
     userGroup: standard
     roles: [ 'ROLE_USER' ]
+    userPermissions: [ ]
+
+  admin_user@test.com:
+    email: admin_user@test.com
+    password: '\$2y\$13\$xyUnkdYpPIDCd5eOm0mqF.vktQD8c3v7s3iUpUw3CfKH2nn39XWrS'
+    userGroup: standard
+    roles: [ 'ROLE_USER', 'ROLE_ADMIN']
     userPermissions: [ ]
 

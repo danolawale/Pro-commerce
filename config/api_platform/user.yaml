@@ -3,14 +3,19 @@ resources:
     operations:
       ApiPlatform\Metadata\GetCollection:
         method: GET
+        security: 'is_granted("ROLE_ADMIN")'
       ApiPlatform\Metadata\Get:
         method: GET
+        security: 'is_granted("VIEW_USER", object)'
       ApiPlatform\Metadata\Post:
         method: POST
+        securityPostDenormalize: 'is_granted("CREATE_USER", object)'
       ApiPlatform\Metadata\Put:
         method: PUT
+        security: 'is_granted("UPDATE_USER", object)'
       ApiPlatform\Metadata\Delete:
         method: Delete
+        security: 'is_granted("ROLE_ADMIN")'
     processor: 'App\State\UserPasswordHasherStateProcessor'
     attributes:
       paginationItemsPerPage: 5
