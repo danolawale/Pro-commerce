@@ -4,6 +4,9 @@ framework:
         # For instance, basic validation constraints will be inferred from Doctrine's metadata.
         #auto_mapping:
         #    App\Entity\: []
+        mapping:
+            paths:
+                - '%kernel.project_dir%/validator/validation.yaml'
 
 when@test:
     framework:

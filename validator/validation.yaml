@@ -1,0 +1,5 @@
+shopify:
+  product:
+    get:
+      request:
+        message: Product response validation error

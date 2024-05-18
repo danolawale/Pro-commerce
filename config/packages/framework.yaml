@@ -8,6 +8,14 @@ framework:
 
     #esi: true
     #fragments: true
+    http_client:
+        scoped_clients:
+            shopify.client:
+                base_uri: '%env(SHOPIFY_BASE_URL)%'
+                headers:
+                    Accept: 'application/json'
+                    Content-Type: 'application/json'
+                    X-Shopify-Access-Token: '%env(SHOPIFY_ACCESS_TOKEN)%'
 
 when@test:
     framework:

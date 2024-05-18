@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    public: true
+
+  mock_http.client:
+    class: App\Tests\Client\MockShopifyProductClient
+
+  App\ThirdParty\AbstractClient\Api\CustomHttpClientInterface $shopifyClient: '@mock_http.client'
+
+  test.app.third-party.shopify.api.product.validation.get-product-response-constraint-validator: '@app.third-party.shopify.api.product.validation.get-product-response-constraint-validator'

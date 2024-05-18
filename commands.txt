@@ -1,2 +1,5 @@
  //tests
  composer require --dev symfony/test-pack symfony/http-client justinrainbow/json-schema
+
+ //run tests
+ php bin/phpunit
